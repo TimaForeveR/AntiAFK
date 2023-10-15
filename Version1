@@ -1,0 +1,10 @@
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+ Title = "The script worked!";
+ Text = "t.me/MyletakyKey";
+ Icon = "rbxthumb://type=Asset&id=14435031323&w=150&h=150"})
+Duration = 10;
+local VirtualUser = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+    VirtualUser:CaptureController()
+    VirtualUser:ClickButton2(Vector2.new())
+end)
